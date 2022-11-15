@@ -1,15 +1,17 @@
 ---
 title: Tailwind Typography Plugin
-author: Sat Naing
-datetime: 2022-07-05T02:05:51Z
+author: Raul Guirado
+datetime: 2022-07-05T02:05:51.000+00:00
 featured: false
 draft: false
 tags:
-  - TypeScript
-  - Astro
-description: "EXAMPLE POST: About Tailwind Typography Plugin and how you can use it effectively."
----
+- TypeScript
+- Astro
+- TailwindCSS
+description: 'EXAMPLE POST: About Tailwind Typography Plugin and how you can use it
+  effectively.'
 
+---
 > This article is from [TailwindLabs](https://tailwindcss-typography.vercel.app/). I put this article to demonstrate how you can write blog posts/articles using AstroPaper theme.
 
 By default, Tailwind removes all of the default browser styling from paragraphs, headings, lists and more. This ends up being really useful for building application UIs because you spend less time undoing user-agent styles, but when you _really are_ just trying to style some content that came from a rich-text editor in a CMS or a markdown file, it can be surprising and unintuitive.
