@@ -1,5 +1,5 @@
 ---
-author: Sat Naing
+author: Raul Guirado
 datetime: 2022-09-23T15:22:00Z
 title: Adding new posts in AstroPaper theme
 slug: adding-new-posts-in-astropaper-theme
@@ -8,12 +8,10 @@ draft: false
 tags:
   - docs
 ogImage: ""
-description:
-  Some rules & recommendations for creating or adding new posts using AstroPaper
-  theme.
+description: Some rules & recommendations for creating or adding new posts.
 ---
 
-Here are some rules/recommendations, tips & ticks for creating new posts in AstroPaper blog theme.
+Here are some rules/recommendations, tips & ticks for creating new posts.
 
 ## Table of contents
 
