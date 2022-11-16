@@ -34,3 +34,5 @@ fields:
   label: description
   config:
     required: true
+pages:
+- src/contents/test-post.md
