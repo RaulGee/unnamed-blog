@@ -4,7 +4,7 @@ export const SITE = {
   website: "http://127.0.0.1:3000/",
   author: "Raul Guirado",
   desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
-  title: "Unnamed Blog",
+  title: "Code Forge",
   ogImage: "default-og.png",
   lightAndDarkMode: true,
   postPerPage: 4,

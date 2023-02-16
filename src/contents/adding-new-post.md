@@ -1,101 +1,48 @@
 ---
 author: Raul Guirado
-datetime: 2022-09-23T15:22:00Z
-title: Adding new posts in AstroPaper theme
-slug: adding-new-posts-in-astropaper-theme
+datetime: 2022-10-18T15:22:00Z
+title: How to Deploy a Static Site to Netlify
+slug: how-to-deploy-a-static-site-to-netlify
 featured: true
 draft: false
 tags:
   - docs
 ogImage: ""
-description: Some rules & recommendations for creating or adding new posts.
+description: In this post, I'll show you how to deploy a static site to Netlify in just a few simple steps.
 ---
 
-Here are some rules/recommendations, tips & ticks for creating new posts.
+Netlify is a popular cloud hosting platform that can be used to deploy static websites, and is becoming increasingly popular among developers and businesses alike. In this post, I'll show you how to deploy a static site to Netlify in just a few simple steps.
 
 ## Table of contents
 
-## Frontmatter
+## Step 1: Create a Repository
 
-Frontmatter is the main place to store some important information about the post (article). Frontmatter lies at the top of the article and is written in YAML format. Read more about frontmatter and its usage in [astro documentation](https://docs.astro.build/en/guides/markdown-content/).
+The first thing you'll need to do is create a repository for your static site on a Git repository hosting platform like GitHub or Bitbucket. If you don't already have a repository, create a new one and push your static site files to it.
 
-Here is the list of frontmatter property for each post.
+## Step 2: Sign up for Netlify
 
-| Property          | Description                                                                               | Remark                    |
-| ----------------- | ----------------------------------------------------------------------------------------- | ------------------------- |
-| **_title_**       | Title of the post. (h1)                                                                   | required<sup>\*</sup>     |
-| **_description_** | Description of the post. Used in post excerpt and site description of the post.           | default = SITE.desc       |
-| **_author_**      | Author of the post.                                                                       | default = SITE.author     |
-| **_datetime_**    | Published datetime in ISO 8601 format.                                                    |                           |
-| **_slug_**        | Slug for the post. Usually the all lowercase title seperated in `-` instead of whtiespace | default = slugified title |
-| **_featured_**    | Whether or not display this post in featured section of home page                         | default = false           |
-| **_draft_**       | Mark this post 'unpublished'.                                                             | default = false           |
-| **_tags_**        | Related keywords for this post. Written in array yaml format.                             |                           |
-| **_ogImage_**     | OG image of the post. Useful for social media sharing and SEO.                            | default = SITE.ogImage    |
+Next, sign up for a free account on Netlify if you haven't already. Once you're logged in, you'll see a button that says "New site from Git". Click it and you'll be prompted to select the repository that you just created.
 
-`title` and `slug` fields in frontmatter must be specified.
+## Step 3: Configure Site Settings
 
-Title is the title of the post and it is very important for search engine optimization (SEO).
+After selecting your repository, Netlify will automatically detect the build command and publish directory for your static site. You can change these settings if necessary, but the defaults should work for most static sites.
 
-`slug` is the unique identifier of the url. Thus, `slug` must be unique and different from other posts. The whitespace of `slug` needs to be separated with `-` or `_` but `-` is recommended. If slug is not specified, the slugified title of the post will be used as slug.
+## Step 4: Deploy Your Site
 
-Here is the sample frontmatter for the post.
+Once you've configured your site settings, click "Deploy site" to deploy your site to Netlify. Depending on the size of your site, this may take a few minutes. Once the deployment is complete, you'll see a URL for your site.
 
-```yaml
-# src/contents/sample-post.md
----
-title: The title of the post
-author: your name
-datetime: 2022-09-21T05:17:19Z
-slug: the-title-of-the-post
-featured: true
-draft: false
-tags:
-  - some
-  - example
-  - tags
-ogImage: ""
-description: This is the example description of the example post.
----
-```
+## Step 5: Test Your Site
 
-## Adding table of contents
+Click on the URL to test your site and make sure everything is working correctly. If you encounter any issues, go back and check your site settings and ensure that your files are properly configured.
 
-By default, a post (article) does not include any table of contents (toc). To include toc, you have to specify it in a specific way.
+## Step 6: Configure Custom Domain
 
-Write `Table of contents` in h2 format (## in markdown) and place it where you want it to be appeared on the post.
+If you have a custom domain, you can configure it in Netlify's settings. Click on "Domain settings" and enter your custom domain. Follow the instructions provided by Netlify to configure your domain's DNS settings.
 
-For instance, if you want to place your table of contents just under the intro paragraph (like I usually do), you can do that in the following way.
+## Step 7: Redeploy Your Site
 
-```md
----
-# some frontmatter
----
+If you make any changes to your site files, you'll need to redeploy your site to Netlify. To do this, simply push the changes to your Git repository, and Netlify will automatically redeploy your site.
 
-Here are some recommendations, tips & ticks for creating new posts in AstroPaper blog theme.
+## Conclusion
 
-## Table of contents
-
-<!-- the rest of the post -->
-```
-
-## Headings
-
-There's one thing to note about headings. The AstroPaper blog posts use title (title in the frontmatter) as the main heading of the post. Therefore, the rest of the heading in the post should be using h2 \~ h6.
-
-This rule is not mandatory, but highly recommended for visual and SEO purposes.
-
-## Bonus
-
-### Image compression
-
-When you put images in the blog post, it is recommended that the image is compressed. This will affect the overall performance of the website.
-
-My recommendation for image compression sites.
-
-- [TinyPng](https://tinypng.com/)
-- [TinyJPG](https://tinyjpg.com/)
-
-### OG Image
-
-The default OG image will be placed if a post does not specify the OG image. Though not required, OG image related to the post should be specify in the frontmatter. The recommended size for OG image is **_1200 X 640_** px.
+Deploying a static site to Netlify is a quick and easy process that can be done in just a few simple steps. By following the steps outlined in this tutorial, you'll be able to deploy your static site to Netlify and have it up and running in no time.
